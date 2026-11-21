@@ -29,7 +29,9 @@ jobs:
           flutter create . --project-name edit_doc_flutter
                     rm -rf lib
           cp -r /tmp/lib_backup lib
-          rm -rf test
+                    rm -rf test
+          rm -rf lib/models/lib
+          flutter pub add shared_preferences
           flutter pub add shared_preferences
 
       - name: Analisar codigo
